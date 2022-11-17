@@ -1,38 +1,550 @@
-.App {
-  text-align: center;
+.main {
+  width: 100%;
+  height: fit-content;
+  top: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainWrapper {
+  position: absolute;
+  top: 0;
+  margin: auto;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputWrap {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 50px;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.25);
+  margin: auto;
+  margin-bottom: 24px;
+  margin-top: 20px;
+}
+
+.input {
+  width: 80%;
+  padding: 4px 8px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: rebeccapurple;
+  font-size: 18px;
+  color: aliceblue;
+  border: none;
+  outline: 0;
+}
+
+.button {
+  width: 20%;
+  background-color: rgb(168, 97, 235);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-size: 30px;
+  webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #e2e7e2; /* Green */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cardList {
+  display: flex;
+  margin-left: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.select {
+  margin-bottom: 24px;
+  width: 12%;
+  height: 40px;
+  padding: 4px 8px;
+  font-size: 18px;
+  background-color: rgba(242, 147, 255, 0.836);
+  border: none;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+.card {
+  width: 200px;
+  height: fit-content;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: deeppink;
+  font-size: 14px;
+  margin-right: 12px;
+  box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-top: 10px;
+}
+
+.card:first-child {
+  margin-left: 0;
+}
+
+.discriptionCard {
+  text-align: center;
+}
+
+.actionDelete {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actionDelete:hover {
+  cursor: pointer;
+}
+
+.editCity {
+  display: flex;
+  margin-right: 10px;
+}
+
+.editCity:hover {
+  cursor: pointer;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleCard {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.discriptionCard {
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+.tempCard {
+  margin-top: 12px;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.tempCard::after {
+  content: "°";
+}
+
+.info {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.info > div {
+  margin-top: 4px;
+}
+
+.singleCityWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.mainWrapperSingle {
+  position: absolute;
+  top: 0;
+  margin: auto;
+  width: 100%;
+  margin-top: 510px;
+}
+
+.hello {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  top: 0;
+}
+
+.dailyCards {
+  display: flex;
+  margin-left: 8px;
+  border-radius: 12px;
+  width: fit-content;
+  padding: 20px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.dailyCard {
+  background-color: #fff;
+  margin-left: 8px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(204, 184, 194);
+  opacity: 0.9;
+}
+
+.goBack {
+  width: 100px;
+  height: fit-content;
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 15px;
+  text-decoration: none;
+  margin: 24px;
+  color: black;
+  text-align: center;
+  background-color: rgb(173, 164, 164);
+  opacity: 0.9;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border: solid black;
+}
+
+.goBack:hover {
+  background-color: #242524; /* Green */
+  color: white;
+}
+
+.cardSingle {
+  position: absolute;
+  display: block;
+  width: 1200px;
+  height: fit-content;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: rgb(204, 184, 194);
+  font-size: 14px;
+  margin-right: 12px;
+  box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: black;
+  margin-top: 30px;
+
+  opacity: 0.8;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.mainInfoSingle {
+  display: block;
+  margin: 30px;
+}
+
+.prevInfoSingle {
+  display: flex;
+  font-size: 20px;
+  height: fit-content;
+  justify-content: space-between;
+}
+
+.prevInfoSingleWithIcon {
+  display: flex;
+  font-size: 36px;
+}
+
+.iconCardSingle {
+  width: 45px;
+  height: 45px;
+}
+
+.titleCardSingle {
+  text-align: center;
+  font-size: 135px;
+  letter-spacing: 30px;
+}
+
+.descriptionCardSingle {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.infoSingle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: 800px;
+  margin: auto;
+}
+
+.infoImg {
+  width: 40px;
+  height: 40px;
+}
+
+.infoSingleElement {
+  display: block;
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 25px;
+  background-color: rgba(184, 169, 185, 0.836);
+  border-radius: 15px;
+}
+
+.tempTodayWrapper {
+  width: 1200px;
+  height: fit-content;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: rgb(204, 184, 194);
+  font-size: 14px;
+  box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: black;
+  display: block;
+  opacity: 0.8;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.tempTodayElement {
+  display: flex;
+  width: fit-content;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  margin: auto;
+}
+
+.videoRain {
+  display: flex;
+  width: 100%;
+  height: 1140px;
+  object-fit: cover;
+}
+
+.styleCard {
+  border: rgb(66, 66, 66) solid;
+  background-color: rgb(163, 159, 159);
+  color: #fff;
+  opacity: 0.9;
+}
+
+.hoverCard {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.hoverCard:hover {
+  background-color: #c8d6ca; /* Green */
+  color: white;
+}
+
+/* @media only screen and (max-width: 1000px) {
+  .mainWrapper{
+    background: rgb(49,44,148);
+    background: linear-gradient(90deg, rgba(49,44,148,1) 7%, rgba(9,9,121,1) 49%, rgba(36,95,107,1) 100%);
   }
-  to {
-    transform: rotate(360deg);
+  .inputWrap{
+    width: 50%;
+  }
+  .input{
+    width: 50%;
+  }
+  .button{
+    width: 40%;
+  }
+  .cardList{
+    margin-left: 40px;
+  }
+  .select{
+    width: 150px;
+  }
+  .card{
+    width: 300px;
+  }
+  .singleCityWrap{
+    background: rgb(49,44,148);
+    background: linear-gradient(90deg, rgba(49,44,148,1) 7%, rgba(9,9,121,1) 49%, rgba(36,95,107,1) 100%);
+    height: 510px;
+  }
+  .mainWrapperSingle{
+    background: rgb(49,44,148);
+    background: linear-gradient(90deg, rgba(49,44,148,1) 7%, rgba(9,9,121,1) 49%, rgba(36,95,107,1) 100%);
+  }
+  .dailyCards{
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
+  .dailyCard{
+    
+  }
+  
+  .cardSingle{
+    width: 80%;
+    margin-right: 25px;
+  }
+  .titleCardSingle{
+    font-size: 40px;
+    letter-spacing: 10px;
+  }
+  .descriptionCardSingle{
+
+  }
+  .mainInfoSingle{
+    
+  }
+  .prevInfoSingle{
+    font-size: 16px;
+  }
+  .prevInfoSingleWithIcon{
+    font-size: 20px;
+  }
+  .iconCardSingle{
+    height: 30px;
+    width: 30px;
+  }
+  .infoSingle{
+    width: 70%;
+  }
+  .infoImg{
+    width: 30px;
+    height: 30px;
+  }
+  .infoSingleElement{
+    width: 200px;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .tempTodayWrapper{
+    width: 0;
+    margin-left: 25px;
+    margin-top: 0;
+    padding: 0;
+    border: 0;
+  }
+  .tempCardToday{
+  }
+  .tempTodayElement{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 16px;
+    
+  }
+  .cardDate{
+    margin-top: 30px;
+  }
+
+  .goBack{
+    margin-top: 20px;
+    margin-left: 170px;
+  }
+} */
+
+@media only screen and (max-width: 600px) {
+  .mainWrapper {
+    background: #242524;
+  }
+  .inputWrap {
+    width: 50%;
+  }
+  .input {
+    width: 50%;
+  }
+  .button {
+    width: 40%;
+  }
+  .cardList {
+    margin-left: 40px;
+  }
+  .select {
+    width: 150px;
+  }
+  .card {
+    width: 300px;
+  }
+  .singleCityWrap {
+    height: 100%;
+  }
+  .mainWrapperSingle {
+    margin-top: 350px;
+    width: 100%;
+  }
+  .cardSingle {
+    width: 80%;
+    margin-right: 25px;
+  }
+  .titleCardSingle {
+    font-size: 40px;
+    letter-spacing: 10px;
+  }
+  .prevInfoSingle {
+    font-size: 16px;
+  }
+  .prevInfoSingleWithIcon {
+    font-size: 20px;
+  }
+  .iconCardSingle {
+    height: 30px;
+    width: 30px;
+  }
+  .infoSingle {
+    width: 70%;
+  }
+  .infoImg {
+    width: 30px;
+    height: 30px;
+  }
+  .infoSingleElement {
+    width: 200px;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .tempTodayWrapper {
+    width: 70%;
+    margin-top: 26px;
+    padding: 0;
+    border: 0;
+  }
+  .tempTodayElement {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 16px;
+    background-color: #242524;
+  }
+  .tempCardToday {
+    width: 50%;
+  }
+
+  .cardDate {
+    margin-top: 30px;
+  }
+  .iconCard {
+    width: 50%;
+    height: 50%;
+    margin-left: 5px;
+  }
+  .dayInfo {
+    margin-left: 5px;
+  }
+  .dailyCards {
+    width: 100%;
+    flex-wrap: wrap;
+    padding-right: 0;
+    width: 90%;
+  }
+  .dailyCard {
+    margin-bottom: 20px;
+    padding-top: 0;
+    margin-left: 26%;
+    font-size: 16px;
+    width: 50%;
+    height: 40%;
+    background-color: #242524;
+  }
+  .goBack {
+    margin-left: 40%;
+  }
+  .videoRain {
+    height: 1400px;
   }
 }
